@@ -12,14 +12,16 @@ export default function BlackMathLandingPage() {
   }, []);
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
-      <header className="fixed top-0 left-0 right-0 z-50 flex justify-center bg-black/60 backdrop-blur-md">
-        <nav className="flex gap-12 py-6 text-base tracking-[0.22em] text-zinc-400">
-         <a href="#home">HOME</a>
-          <a href="#method" className="hover:text-white transition">METHOD</a>
-          <a href="#students" className="hover:text-white transition">STUDENTS</a>
-          <a href="#contact" className="hover:text-white transition">CONTACT</a>
-        </nav>
-      </header>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md">
+  <nav className="mx-auto flex max-w-full overflow-x-auto whitespace-nowrap px-6 py-6 text-base tracking-[0.22em] text-zinc-400 scrollbar-hide">
+    <div className="flex min-w-max gap-12 mx-auto">
+      <a href="#home" className="hover:text-white transition">HOME</a>
+      <a href="#method" className="hover:text-white transition">METHOD</a>
+      <a href="#students" className="hover:text-white transition">STUDENTS</a>
+      <a href="#contact" className="hover:text-white transition">CONTACT</a>
+    </div>
+  </nav>
+</header>
 
       <section id="home" className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <motion.h1
