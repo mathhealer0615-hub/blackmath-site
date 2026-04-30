@@ -1,3 +1,4 @@
+@import "katex/dist/katex.min.css";
 @import "tailwindcss";
 
 html {
@@ -20,4 +21,35 @@ body {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+.blackmath-title {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #e5e5e5 20%,
+    #ffffff 40%,
+    #999999 60%,
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 4s linear infinite;
+
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.12),
+    0 0 16px rgba(255, 255, 255, 0.06);
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
 }

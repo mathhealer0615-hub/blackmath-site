@@ -1,5 +1,6 @@
 "use client";
 
+import BlackMathAI from "./components/BlackMathAI";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -17,6 +18,8 @@ export default function BlackMathLandingPage() {
     <div className="flex min-w-max gap-12 mx-auto">
       <a href="#home" className="hover:text-white transition">HOME</a>
       <a href="#method" className="hover:text-white transition">METHOD</a>
+      <a href="#blackmath-ai" className="hover:text-white transition">AI</a>
+      <a href="#concept-book" className="hover:text-white transition">BOOK</a>
       <a href="#students" className="hover:text-white transition">STUDENTS</a>
       <a href="#contact" className="hover:text-white transition">CONTACT</a>
     </div>
@@ -25,13 +28,13 @@ export default function BlackMathLandingPage() {
 
       <section id="home" className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-6xl md:text-8xl font-semibold tracking-tight"
-        >
-          BLACKMATH
-        </motion.h1>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="blackmath-title text-6xl md:text-8xl font-semibold tracking-tight"
+>
+  BLACKMATH
+</motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -92,6 +95,78 @@ export default function BlackMathLandingPage() {
         </div>
       </section>
 
+      <section id="blackmath-ai" className="px-6 py-32 border-t border-white/10">
+  <div className="mx-auto max-w-4xl text-center">
+    
+    <p className="mb-6 text-sm tracking-[0.35em] text-zinc-500">
+      BLACKMATH AI
+    </p>
+
+    <h2 className="text-4xl md:text-6xl font-semibold tracking-tight">
+      사고는 도구가 아니라,
+      <br />
+      훈련되어야 합니다.
+    </h2>
+
+    <p className="mt-10 text-xl leading-8 text-zinc-400">
+      BLACKMATH AI는 단순한 풀이를 제공하지 않습니다.
+      <br />
+      문제를 해석하고 사고하는 방식을 설계하고 있습니다.
+    </p>
+
+    {/* 버튼 */}
+    <button
+      disabled
+      className="mt-16 px-8 py-4 rounded-xl bg-zinc-800 text-zinc-400 
+      cursor-not-allowed border border-white/10 tracking-wide"
+    >
+      🧠 BLACKMATH AI - Coming Soon
+    </button>
+
+    {/* 안내 문구 */}
+    <p className="mt-6 text-sm text-zinc-500 leading-6">
+      우리는 답을 빠르게 주는 AI를 만들지 않습니다.
+      <br />
+      생각을 바꾸는 AI를 만들고 있습니다.
+    </p>
+
+  </div>
+</section>
+
+<section id="concept-book" className="px-6 py-32 border-t border-white/10">
+  <div className="mx-auto max-w-4xl text-center">
+    <p className="mb-6 text-sm tracking-[0.35em] text-zinc-500">
+      CONCEPT BOOK
+    </p>
+
+    <h2 className="text-4xl md:text-6xl font-semibold tracking-tight">
+      공식을 외우기 전에,
+      <br />
+      개념을 읽는 법부터.
+    </h2>
+
+    <p className="mt-10 text-xl leading-8 text-zinc-400">
+      BLACKMATH 개념서는 수학을 공식의 나열이 아니라
+      <br />
+      언어, 직관, 구조의 흐름으로 설명합니다.
+    </p>
+
+    <button
+      disabled
+      className="mt-16 px-8 py-4 rounded-xl bg-zinc-800 text-zinc-400 
+      cursor-not-allowed border border-white/10 tracking-wide"
+    >
+      📘 BLACKMATH 개념서 - Coming Soon
+    </button>
+
+    <p className="mt-6 text-sm text-zinc-500 leading-6">
+      단순한 풀이집이 아니라,
+      <br />
+      문제를 읽는 사고방식을 담은 전자책입니다.
+    </p>
+  </div>
+</section>
+
       <section id="students" className="min-h-screen px-6 py-32 border-t border-white/10">
         <div className="mx-auto max-w-5xl text-center">
           <p className="mb-6 text-sm tracking-[0.35em] text-zinc-500">STUDENTS</p>
@@ -122,3 +197,4 @@ export default function BlackMathLandingPage() {
     </main>
   );
 }
+
