@@ -1,27 +1,61 @@
 "use client";
 
 import BlackMathAI from "./components/BlackMathAI";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function BlackMathLandingPage() {
+  const [activeSection, setActiveSection] = useState("home");
     useEffect(() => {
-    if (window.location.hash) {
-      window.history.replaceState(null, "", window.location.pathname);
+  if (window.location.hash) {
+    window.history.replaceState(null, "", window.location.pathname);
+  }
+  window.scrollTo(0, 0);
+
+  const sections = ["home", "method", "blackmath-ai", "concept-book", "students", "contact"];
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    },
+    {
+      threshold: 0.45,
     }
-    window.scrollTo(0, 0);
-  }, []);
+  );
+
+  sections.forEach((id) => {
+    const element = document.getElementById(id);
+    if (element) observer.observe(element);
+  });
+
+  return () => observer.disconnect();
+}, []);
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-md">
   <nav className="mx-auto flex max-w-full overflow-x-auto whitespace-nowrap px-6 py-6 text-base tracking-[0.22em] text-zinc-400 scrollbar-hide">
     <div className="flex min-w-max gap-12 mx-auto">
-      <a href="#home" className="hover:text-white transition">HOME</a>
-      <a href="#method" className="hover:text-white transition">METHOD</a>
-      <a href="#blackmath-ai" className="hover:text-white transition">AI</a>
-      <a href="#concept-book" className="hover:text-white transition">BOOK</a>
-      <a href="#students" className="hover:text-white transition">STUDENTS</a>
-      <a href="#contact" className="hover:text-white transition">CONTACT</a>
+      <a
+  href="#home"
+  className={`transition ${
+    activeSection === "home" ? "text-white border-b border-white pb-1" : "hover:text-white"
+  }`}
+>
+  HOME
+</a>
+ <a href="#method" className={`transition ${activeSection === "method" ? "text-white border-b border-white pb-1" : "hover:text-white"}`}>METHOD</a>
+
+<a href="#blackmath-ai" className={`transition ${activeSection === "blackmath-ai" ? "text-white border-b border-white pb-1" : "hover:text-white"}`}>AI</a>
+
+<a href="#concept-book" className={`transition ${activeSection === "concept-book" ? "text-white border-b border-white pb-1" : "hover:text-white"}`}>BOOK</a>
+
+<a href="#students" className={`transition ${activeSection === "students" ? "text-white border-b border-white pb-1" : "hover:text-white"}`}>STUDENTS</a>
+
+<a href="#contact" className={`transition ${activeSection === "contact" ? "text-white border-b border-white pb-1" : "hover:text-white"}`}>CONTACT</a>
     </div>
   </nav>
 </header>
