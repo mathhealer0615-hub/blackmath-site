@@ -187,7 +187,7 @@ export default function BlackMathLandingPage() {
 
    <div className="mt-14 flex justify-center">
   <img
-    src="/blackmath-concept-book.png"
+    src="/blackmath-concept-book-v2.png"
     alt="BLACKMATH 수학을 읽는 법 개념서"
     className="w-[520px] md:w-[700px] shadow-[0_0_80px_rgba(255,255,255,0.06)]"
   />
