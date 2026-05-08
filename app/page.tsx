@@ -189,7 +189,7 @@ export default function BlackMathLandingPage() {
   <img
     src="/blackmath-concept-book.png"
     alt="BLACKMATH 수학을 읽는 법 개념서"
-    className="w-[320px] md:w-[420px] rounded-3xl border border-white/10 shadow-2xl shadow-white/10"
+    className="w-[520px] md:w-[700px] shadow-[0_0_80px_rgba(255,255,255,0.06)]"
   />
 </div>
 
