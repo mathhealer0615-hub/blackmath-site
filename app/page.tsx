@@ -185,13 +185,13 @@ export default function BlackMathLandingPage() {
       언어와 구조를 해석하는 방식으로 설명합니다.
     </p>
 
-    <div className="mt-16 flex justify-center">
-      <img
-        src="/blackmath-concept-book.png"
-        alt="BLACKMATH 수학을 읽는 법 개념서"
-        className="w-full max-w-3xl rounded-3xl border border-white/10 shadow-2xl shadow-white/10"
-      />
-    </div>
+   <div className="mt-14 flex justify-center">
+  <img
+    src="/blackmath-concept-book.png"
+    alt="BLACKMATH 수학을 읽는 법 개념서"
+    className="w-[320px] md:w-[420px] rounded-3xl border border-white/10 shadow-2xl shadow-white/10"
+  />
+</div>
 
     <button
       disabled
