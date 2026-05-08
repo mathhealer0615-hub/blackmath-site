@@ -174,20 +174,28 @@ export default function BlackMathLandingPage() {
     </p>
 
     <h2 className="text-4xl md:text-6xl font-semibold tracking-tight">
-      공식을 외우기 전에,
+      BLACKMATH,
       <br />
-      개념을 읽는 법부터.
+      수학을 읽는 법.
     </h2>
 
     <p className="mt-10 text-xl leading-8 text-zinc-400">
-      BLACKMATH 개념서는 수학을 공식의 나열이 아니라
+      BLACKMATH는 수학을 공식의 암기가 아니라
       <br />
-      언어, 직관, 구조의 흐름으로 설명합니다.
+      언어와 구조를 해석하는 방식으로 설명합니다.
     </p>
+
+    <div className="mt-16 flex justify-center">
+      <img
+        src="/blackmath-concept-book.png"
+        alt="BLACKMATH 수학을 읽는 법 개념서"
+        className="w-full max-w-3xl rounded-3xl border border-white/10 shadow-2xl shadow-white/10"
+      />
+    </div>
 
     <button
       disabled
-      className="mt-16 px-8 py-4 rounded-xl bg-zinc-800 text-zinc-400 
+      className="mt-10 px-8 py-4 rounded-xl bg-zinc-800 text-zinc-400 
       cursor-not-allowed border border-white/10 tracking-wide"
     >
       📘 BLACKMATH 개념서 - Coming Soon
